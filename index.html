@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Contato.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <title>Contato</title>
+    <style>
+        .popup-caixa {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 1000px;
+            height: 500px;
+            margin-top: -250px;
+            margin-left: -500px;
+            background: rgba(0, 0, 0, 0.5);
+            background-color: #661465;
+            font-family: 'Montserrat';
+        }
+
+        .popup-conteudo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+
+
+            background-color: #661465;
+            font-family: 'Montserrat';
+        }
+
+
+        .fechar {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="alinhamentohd">
+        <ul class="centro-lista-menu">
+            <li class="lista-menu">
+                <a class="link-menu" href="#">
+                    Quem somos
+                </a>
+            </li>
+
+            <li class="lista-menu">
+                <a class="link-menu" href="#">
+                    Promoções
+                </a>
+            </li>
+
+            <li class="lista-menu">
+                <a class="link-menu" href="#">
+                    <img class="logo-menu-cima " src="IMAGENS/Group 7.png" alt="Logo">
+                </a>
+            </li>
+
+            <li class="lista-menu">
+                <a class="link-menu" href="#">
+                    Loja Virtual
+                </a>
+            </li>
+
+            <li class="lista-menu">
+                <a class="link-menu" href="#">
+                    Fale Conosco
+                </a>
+            </li>
+        </ul>
+    </header>
+    <h1 class="contato"> Contato </h1>
+    <div class="div-dados">
+        <div class="dados">
+            <div class="menu3">
+                <input type="text" id="nome" name="nome" style="width: 400px; height: 50px;" placeholder="Nome:">
+            </div>
+            <div class="menu3">
+                <input type="text" id="nome" name="nome" style="width: 400px; height: 50px;" placeholder="Email:">
+            </div>
+            <div class="menu3">
+                <input type="text" id="nome" name="nome" style="width: 400px; height: 50px;" placeholder="Telefone:">
+            </div>
+            <div class="menu3">
+                <input type="text" id="nome" name="nome" style="width: 400px; height: 50px;"
+                    placeholder="Qual o problema:">
+            </div>
+            <div class="dados" id="alinharC">
+                <ul>
+                    <li>Telefone:</li>
+                    <li>(17)992818628</li>
+                    <li>Email:</li>
+                    <li>blablabla@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="botao2">
+        <button class="tamanho"> ENVIAR </button>
+    </div>
+    <div class="alinhamento">
+        <div class="texto-loc">
+            <p class="Localiza"> José Bonifácio </p>
+        </div>
+        <div id="apps">
+            <img class="tamanhoimg" src="IMAGENS/gg.png" alt="">
+        </div>
+    </div>
+    <footer>
+        <ul class="menu-baixo">
+            <li>
+                <img class="logo-menu-baixo" src="IMAGENS/Group 7.png" alt="Logo">
+            </li>
+            <li>
+                Copyright © 2023 Versimo
+            </li>
+        </ul>
+    </footer>
+    <div class="popup-caixa" id="popup" onclick="fecharPopup()">
+        <div class="popup-conteudo" onclick="event.stopPropagation();">
+            <span class="fechar" onclick="fecharPopup()">&times;</span>
+
+            <body class="body">
+                <div class="Popup">
+                    <h1 class="titulo">PARABENS!!</h1>
+                    <h2 class="desconto"> VOCE GANHOU 10% DE DESCONTO! </h2>
+                    <input type="text" class="inputemail" placeholder="Email:">
+                    <label class="ofertas">
+                        <input type="checkbox" id="receberEmails" name="receberEmails" value="sim">
+                        Aceito receber ofertas nesse email
+                    </label>
+                    <button class="final">
+                        USAR AGORA
+                    </button>
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        setTimeout(function () {
+            abrirPopup();
+        }, 5000);
+
+        setTimeout(function () {
+            fecharPopup();
+        }, 10000);
+
+        function abrirPopup() {
+            var popup = document.getElementById("popup");
+            popup.style.display = "block";
+        }
+
+        function fecharPopup() {
+            var popup = document.getElementById("popup");
+            popup.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
